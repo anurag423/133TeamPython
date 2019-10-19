@@ -6,10 +6,11 @@ Created on Tue Oct 15 11:47:26 2019
 """
 
 import os.path
+import GreyscaleFunction as gsfunc
 
 #asks the user for input and output files files 
-input_file = input('Enter the input file with .jpg attached: ')
-output_file = input('Enter the output file with .jpg attached: ')
+input_file = input('Enter the input file with .png attached: ')
+output_file = input('Enter the output file with .png attached: ')
 
 if not os.path.isfile(input_file):
     viable = 'no'
@@ -49,7 +50,7 @@ elif viable == 'yes':
     #goes down path for user's input for greyscale
     elif user_answer == 'greyscale':
     #    read, run function for rgb changes, output file
-        pass
+        gsfunc.Greyscale(input_file,output_file)
     
     #goes down path for user's input for filtering
     elif user_answer == 'filter':
