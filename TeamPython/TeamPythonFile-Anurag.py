@@ -4,9 +4,11 @@ Created on Tue Oct 15 11:47:26 2019
 
 @author: anumb
 """
-
+#import os.path module that is used for error checking if the user puts in an invalid file
 import os.path
+#imports functions that run for each option from user
 import GreyscaleFunction as gsfunc
+import SmoothingFunction as sfunc
 
 #asks the user for input and output files files 
 input_file = input('Enter the input file with .png attached: ')
@@ -51,24 +53,14 @@ elif viable == 'yes':
     elif user_answer == 'greyscale':
     #    read, run function for rgb changes, output file
         gsfunc.Greyscale(input_file,output_file)
+        print('Complete!')
     
     #goes down path for user's input for filtering
     elif user_answer == 'filter':
-        user_answer = input('Your options are lorem1,lorem2,lorem3, and lorem4: ').lower()
-        if user_answer == 'lorem1':
-    #       read, run function for filtering, output file
-            pass
-        if user_answer == 'lorem2':
-    #       read, run function for filtering, output file
-            pass
-        if user_answer == 'lorem3':
-    #       read, run function for filtering, output file
-            pass
-        if user_answer == 'lorem4':
-    #       read, run function for filtering, output file
-            pass
-        else:
-            print('You have entered an incorrect input. Please restart the program.')
+    #    read, run function for filtering with smoothing, outputs file
+        sfunc.GaussianBlur(input_file,output_file)
+        print('Complete!')
+
             
 #    if userinput for image processing is incorrect, exits program and prints error message
     else:
