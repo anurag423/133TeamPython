@@ -2,8 +2,8 @@
 import numpy as np
 from PIL import Image
 
-#function creates output file from input with greyscale applied
-def Greyscale(input_file,output_file):
+#function creates output file from input with vertical mirror applied
+def MirrorFunction(input_file,output_file):
     
     #opens user_input image with pillow. creates array with numpy
     array = Image.open(input_file)
@@ -15,11 +15,10 @@ def Greyscale(input_file,output_file):
     #creates new array that will be used for operations
     new_array = np.copy(array)
     
-    #uses nested loop to convert each pixel to greyscale
+    #the loop mirrors values vertically
     for i in range(0,height):
-        for j in range(0,width):
-            new_array[i][j] = 0.21 * array[i][j][0] + 0.72 * array[i][j][1] + 0.07 * array[i][j][2]
-            
+        new_array[i] = (array[abs(i-(height-1))])
+        
     #saves output file
     img = Image.fromarray(new_array, 'RGB')
     img.save(output_file)
