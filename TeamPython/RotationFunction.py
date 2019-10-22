@@ -21,9 +21,9 @@ def Rotation(input_file,output_file):
     new_array = np.reshape(new_array, (width,height,3))
     
     #nested loop changes value of the new array along a diagonal line
-    for i in range (0,width):
-        for j in range(0,height):
-            new_array[-i][-j] = array[j][i]
+    for i in range(0,height):
+        for j in range(0,width):
+            new_array[-j-1][-i-1] = array[i][j]
             
     #creates copy of new_array for mirroring
     finalarray = np.copy(new_array)
