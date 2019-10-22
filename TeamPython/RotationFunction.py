@@ -35,5 +35,6 @@ def Rotation(input_file,output_file):
     #saves files as jpg
     img = Image.fromarray(finalarray, 'RGB')
     img.save(output_file)
-    
+
+    #returned output_file is used in master when rotating 180 or 270 degrees
     return output_file
