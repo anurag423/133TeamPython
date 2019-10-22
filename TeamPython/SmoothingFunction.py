@@ -50,7 +50,7 @@ def GaussianBlur(input_file,output_file):
                                          array[i-2][j][k] * 6 +
                                          array[i-2][j+1][k] * 4 +
                                          array[i-2][j+2][k] * 1)/(256)
-                
-    #saves output file
+
+    #saves jpg
     img = Image.fromarray(new_array, 'RGB')
     img.save(output_file)

@@ -14,9 +14,11 @@ import RotationFunction as ffunc
 import MirrorFunction as mfunc
 
 #asks the user for input and output files files 
-input_file = input('Enter the input file with .png attached: ')
-output_file = input('Enter the output file with .png attached: ')
+input_file = input('Enter the input file with file type attached: ')
+output_file = input('Enter the output file with file type attached: ')
 
+    
+    
 #if os path determines that user inputted file doesnt exist, outputs error, sets viable to no
 if not os.path.isfile(input_file):
     viable = 'no'

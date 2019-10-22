@@ -31,8 +31,9 @@ def Rotation(input_file,output_file):
     #the loop mirrors values from new_array to final_array, creating 90 degree rotation
     for i in range(0,width):
         finalarray[i] = (new_array[abs(i-(width-1))])
-        
-    #saves output file
+ 
+    #saves files as jpg
     img = Image.fromarray(finalarray, 'RGB')
     img.save(output_file)
+    
     return output_file
