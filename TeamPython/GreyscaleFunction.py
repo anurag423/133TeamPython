@@ -20,6 +20,6 @@ def Greyscale(input_file,output_file):
         for j in range(0,width):
             new_array[i][j] = 0.21 * array[i][j][0] + 0.72 * array[i][j][1] + 0.07 * array[i][j][2]
             
-    #saves files as jpg
+    #saves files as output file
     img = Image.fromarray(new_array, 'RGB')
     img.save(output_file)

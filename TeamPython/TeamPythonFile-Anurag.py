@@ -12,6 +12,7 @@ import GreyscaleFunction as gsfunc
 import SmoothingFunction as sfunc
 import RotationFunction as ffunc
 import MirrorFunction as mfunc
+import ConversionFunction as cfunc
 
 #sets viable values such that the while loop will start
 format_viable = 'no'
@@ -55,7 +56,7 @@ if location_viable == 'yes' and format_viable == 'yes':
     while user_answer == 'start':
         
         #asks the user for input process
-        user_answer = input("Do you want to Rotate, Mirror, Greyscale or Filter?: ").lower()
+        user_answer = input("Do you want to Convert, Rotate, Mirror, Greyscale or Filter?: ").lower()
         
         #goes down path for user's inputs for rotation
         if user_answer == 'rotate':
@@ -63,15 +64,18 @@ if location_viable == 'yes' and format_viable == 'yes':
             user_answer = input('Do you want to rotate by 90/180/270?: ').lower()
             
             if user_answer== '90':
+                print('\nPlease allow function time to run.')
                 ffunc.Rotation(input_file,output_file)
                 print('\nComplete!')
                 
             elif user_answer== '180':
+                print('\nPlease allow function time to run.')
                 input_file = ffunc.Rotation(input_file,output_file)
                 ffunc.Rotation(input_file,output_file)
                 print('\nComplete!')
                     
             elif user_answer== '270':
+                print('\nPlease allow function time to run.')
                 input_file = ffunc.Rotation(input_file,output_file)
                 input_file = ffunc.Rotation(input_file,output_file)
                 ffunc.Rotation(input_file,output_file)
@@ -89,11 +93,13 @@ if location_viable == 'yes' and format_viable == 'yes':
     
         #mirrors user's input vertically
         elif user_answer == 'mirror':
+            print('\nPlease allow function time to run.')
             mfunc.MirrorFunction(input_file,output_file)
             print('\nComplete!')
         
         #makes greyscale version of user's input
         elif user_answer == 'greyscale':
+            print('\nPlease allow function time to run.')
             gsfunc.Greyscale(input_file,output_file)
             print('\nComplete!')
             
@@ -102,7 +108,13 @@ if location_viable == 'yes' and format_viable == 'yes':
             print('\nPlease allow function time to run.')
             sfunc.GaussianBlur(input_file,output_file)
             print('\nComplete!')
-        
+            
+        #makes converted version of user's input            
+        elif user_answer == 'convert':
+            print('\nPlease allow function time to run.')
+            cfunc.Conversion(input_file,output_file)
+            print('\nComplete!')
+            
         #typing exit in input allows user to exit loop 
         elif user_answer == 'exit':
             print('\n\tSorry!')

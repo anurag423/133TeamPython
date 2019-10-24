@@ -32,7 +32,7 @@ def Rotation(input_file,output_file):
     for i in range(0,width):
         finalarray[i] = (new_array[abs(i-(width-1))])
  
-    #saves files as jpg
+    #saves files as output file
     img = Image.fromarray(finalarray, 'RGB')
     img.save(output_file)
 

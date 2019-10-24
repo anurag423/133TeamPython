@@ -19,6 +19,6 @@ def MirrorFunction(input_file,output_file):
     for i in range(0,height):
         new_array[i] = (array[abs(i-(height-1))])
         
-    #saves files as jpg
+    #saves files as output file
     img = Image.fromarray(new_array, 'RGB')
     img.save(output_file)
