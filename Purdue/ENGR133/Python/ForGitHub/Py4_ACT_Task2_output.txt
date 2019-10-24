@@ -1,0 +1,5 @@
+Exam 1:
+Average = 69.75
+Standard Deviation = 16.32
+High Score = 90.00
+Low Score = 46.00

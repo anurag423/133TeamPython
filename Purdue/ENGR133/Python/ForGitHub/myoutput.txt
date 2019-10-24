@@ -1,0 +1,6 @@
+For a target value of 2.0
+The summation values at each iteration are:
+1.0
+1.5
+1.8333333333333333
+2.083333333333333

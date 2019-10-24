@@ -1,0 +1,7 @@
+Find out what problems we are being asked to resolve
+Determine what has been given in the problem statement
+Provide graphical representation of the problem
+Create a model to solve the problem
+Make and document necessary assumptions
+Plug the numbers given into the model
+Provide convincing validation of the model
