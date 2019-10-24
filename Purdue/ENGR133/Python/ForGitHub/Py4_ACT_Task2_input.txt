@@ -1,4 +1,0 @@
-Mark 65
-Sally 78
-John 90
-Karen 46

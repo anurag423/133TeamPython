@@ -1,7 +1,0 @@
-Step 1: Find out what problems we are being asked to resolve
-Step 2: Determine what has been given in the problem statement
-Step 3: Provide graphical representation of the problem
-Step 4: Create a model to solve the problem
-Step 5: Make and document necessary assumptions
-Step 6: Plug the numbers given into the model
-Step 7: Provide convincing validation of the model
